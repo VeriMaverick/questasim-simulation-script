@@ -21,9 +21,8 @@ vlib work
 
 # Compile the verilog/systemverilog files 
 vlog -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF  ${SIM_DIR}/${RUN_FILE}.sv \
-${RTL_DIR}/arbiter.v    \
-${RTL_DIR}/slave_fifo.v \
-${RTL_DIR}/mcdt.v       \
+${RTL_DIR}/rtl.v    \
+
 
 # Start Simulation
 vsim -c -sv_lib $UVM_DPI_HOME/uvm_dpi work.${RUN_FILE}
