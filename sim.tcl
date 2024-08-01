@@ -22,19 +22,8 @@ vlib work
 
 # Compilation library and Compile file list
 vlog -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF    \
-${SIM_DIR}/arb_pkg.sv       \
-${SIM_DIR}/chnl_pkg.sv      \
-${SIM_DIR}/rpt_pkg.sv       \
-${SIM_DIR}/fmt_pkg.sv       \
-${SIM_DIR}/reg_pkg.sv       \
-${SIM_DIR}/mcdf_pkg.sv      \
+${SIM_DIR}/rtl.sv       \
 ${SIM_DIR}/${RUN_FILE}.sv   \
-${RTL_DIR}/param_def.v      \
-${RTL_DIR}/arbiter.v        \
-${RTL_DIR}/formater.v       \
-${RTL_DIR}/reg.v            \
-${RTL_DIR}/slave_fifo.v     \
-${RTL_DIR}/mcdf.v           \
 
 # Start Simulation
 vsim -c -sv_lib $UVM_DPI_HOME/uvm_dpi work.${RUN_FILE}
